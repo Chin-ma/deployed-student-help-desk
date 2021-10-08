@@ -1,0 +1,282 @@
+.stud-query {
+    position: absolute;
+    top: 100px;
+    left: 660px;
+    background-color: #fea500;
+    color: #fce08e;
+    border-radius: 30px;
+    width: 600px;
+    align-items: center;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 45px;
+    overflow-x: hidden;
+}
+
+.stud-queries {
+    position: relative;
+    top: 108px;
+    left: 567px;
+    background-color: #fce08e;
+    width: 750px;
+    font-family: Source Sans Pro;
+    font-size: 25px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 15px;
+    overflow-x: hidden;
+}
+
+#showarea {
+    font-family: Source Sans Pro;
+    background-color: #fea500;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+#insert-text {
+    position: relative;
+    top: 65px;
+    left: 583px;
+    resize: none;
+    background-color: #42beb8;
+    font-family: Source Sans Pro;
+    font-size: 15px;
+    border-radius: 10px;
+    height: 100px;
+    width: 744px;
+    overflow-x: hidden;
+}
+
+.ok-btn {
+    position: relative;
+    top: 56px;
+    left:596px;
+    font-family: Source Sans Pro;
+    background-color: #fea500;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.timestamp {
+    position: relative;
+    top: 118px;
+    left: 1172px;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    color: gray;
+    width: 160px;
+    overflow-x: hidden;
+}
+
+#del-btn {
+    position: relative;
+    top: 66px;
+    left: 1340px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: red;
+    cursor: pointer;
+}
+
+.delete {
+    border: none;
+    background-color: none;
+    background: none;
+}
+
+.rep-show {
+    position: relative;
+    top: 90px;
+    right: 0;
+    left: 15px;
+    bottom: 0;
+    margin: auto;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    background-color: #fea500;
+    width: 5%;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .stud-query {
+        position: absolute;
+        left: 20px;
+        top: 60px;
+        font-size: 18px;
+        width: 90%;
+    }
+    .stud-queries {
+        position: relative;
+        top: 17px;
+        left: 23px;
+        width: 80%;
+        font-size: 15px;
+    }
+    #showarea {
+        font-size: 10px;
+    }
+    #insert-text {
+        position: relative;
+        top: -34px;
+        left: 38px;
+        font-size: 10px;
+        height: 60px;
+        width: 236px;
+    }
+    .ok-btn {
+        font-size: 10px;
+        top: -10px;
+        left: 5px;
+    }
+    .timestamp {
+        left: 114px;
+        top: 30px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 12px;
+    }
+    .rep-show {
+        width: 20%;
+        font-size: 12px;
+        top: 0;
+    }
+    #del-btn {
+        left: 328px;
+        top: -31px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 780px) {
+    .stud-query {
+        width: 90%;
+        height: 6%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 435px;
+        margin: auto;
+        font-size: 25px;
+    }
+    .stud-queries {
+        top: 74px;
+        bottom: 0;
+        right: 0;
+        left: 66px;
+        width: 80%;
+        font-size: 20px;
+    }
+    #insert-text {
+        width: 80%;
+        top: 34px;
+        bottom: 0;
+        right: 0;
+        left: 80px;
+    }
+    .ok-btn {
+        top: 73px;
+        left: 41px;
+        font-size: 15px;
+    }
+    .timestamp {
+        top: 87px;
+        left: 224px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .rep-show {
+        width: 10%;
+        top: 59px;
+        font-size: 18px;
+    }
+    #del-btn {
+        left: 692px;
+        top: 31px;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    .stud-query {
+        width: 50%;
+        height: 9%;
+        top: 39px;
+        right: 0;
+        left: 0;
+        bottom: 435px;
+        margin: auto;
+        font-size: 35px;
+        text-align: center;
+    }
+    .stud-queries {
+        top: 74px;
+        bottom: 0;
+        right: 0;
+        left: 209px;
+        width: 55%;
+        font-size: 20px;
+    }
+    #insert-text {
+        width: 55%;
+        top: 33px;
+        bottom: 0;
+        right: 0;
+        left: 220px;
+    }
+    .ok-btn {
+        top: 73px;
+        left: 180px;
+        font-size: 15px;
+    }
+    .timestamp {
+        top: 87px;
+        left: 189px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .rep-show {
+        width: 10%;
+        font-size: 18px;
+        top: 59px;
+        left: 0;
+    }
+    #del-btn {
+        left: 776px;
+        top: 35px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .stud-query {
+        left: 420px;
+    }
+    .stud-queries {
+        left: 315px;
+    }
+    #insert-text {
+        left: 330px;
+    }
+    .ok-btn {
+        left: 340px;
+    }
+    .timestamp {
+        top: 121px;
+        left: 285px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    #del-btn {
+        left: 1095px;
+        top: 63px;
+    }
+}

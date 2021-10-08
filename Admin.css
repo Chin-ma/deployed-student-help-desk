@@ -1,0 +1,159 @@
+.form-box {
+    background-color: #42BEB8;
+    position: relative;
+    top: 380px;
+    left: 821px;
+    width: 283px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.field {
+    padding: 5px;
+    margin: 7px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    position: absolute;
+    left: 5px;
+}
+
+#user {
+    top: 23px;
+}
+
+#pass {
+    top: 80px;
+}
+
+.log-btn {
+    position: absolute;
+    top: 171px;
+    left: 108px;
+    background-color: #fea500;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 5px;
+    text-decoration: none;
+    color: #154476;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.log-btn:hover {
+    background-color: #154476;
+    color: white;
+}
+
+.state {
+    position: absolute;
+    top: 221px;
+    left: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#eye {
+    position: absolute;
+    top: 98px;
+    left: 242px;
+}
+
+@media screen and (max-width: 480px) {
+    .form-box {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        height: 230px;
+        margin: auto;
+    }
+    .logo-img {
+        display: none;
+    }
+    .field {
+        font-size: 15px;
+        left: 15px;
+    }
+    #user {
+        top: 15px;
+    }
+    #pass {
+        top: 60px;
+    }
+    .state {
+        font-size: 15px;
+        top: 180px;
+        left: 5px;
+    }
+    .log-btn {
+        font-size: 15px;
+        top: 130px;
+        left: 100px;
+    }
+    #eye {
+        top: 75px;
+        left: 205px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 780px) {
+    .form-box {
+        top: 25px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 300px;
+        height: 300px;
+    }
+    .field {
+        font-size: 20px;
+        left: 15px;
+    }
+    #user {
+        top: 15px;
+    }
+    #pass {
+        top: 60px;
+    }
+    .state {
+        font-size: 20px;
+        top: 200px;
+        left: 5px;
+    }
+    .log-btn {
+        font-size: 20px;
+        top: 130px;
+        left: 118px;
+    }
+    #eye {
+        top: 75px;
+        left: 251px;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    .form-box {
+        top: 278px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .form-box {
+        top: 260px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

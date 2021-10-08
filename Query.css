@@ -1,0 +1,356 @@
+.query-form {
+    position: relative;
+    width: 841px;
+    height: 491px;
+    left: 530px;
+    top: 190px;
+
+    /*background: #FCE08E;*/
+    border-radius: 42px;
+}
+
+.heading {
+    position: absolute;
+    width: 841px;
+    height: 82px;
+    /*left: 2px;
+    top: 3px;*/
+    text-align: center;
+    background: #FEA500;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+#q-text {
+    background-color: #FCE08E;
+    position: absolute;
+    left: 38px;
+    top: 150px;
+    font-family: Source Sans Pro;
+    width: 750px;
+    height: 300px;
+    font-size: 18px;
+    resize: none;
+    border: none;
+}
+
+.user-data {
+    position: absolute;
+    padding: 5px;
+    top: 105px;
+    width: 300px;
+    border-radius: 30px;
+    border: 2px solid black;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#u-sub {
+    right: 38px;
+}
+
+#u-name {
+    left: 38px;
+}
+
+.query-head {
+    font-family: Source Sans Pro;
+    font-size: 48px;
+    color: #FCE08E;
+    position: absolute;
+    left: 310px;
+    top: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.can-btn {
+    position: absolute;
+    background-color: #ff3d3d;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    color: white;
+    border-radius: 13px;
+    position: absolute;
+    width: 158px;
+    height: 46px;
+    left: 50px;
+    top: 500px;
+}
+
+.can-btn:hover {
+    background-color: #bd3030;
+}
+
+.sub-btn {
+    position: absolute;
+    background-color: #37b553;
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    color: white;
+    border-radius: 13px;
+    position: absolute;
+    width: 158px;
+    height: 46px;
+    right: 50px;
+    top: 500px;
+}
+
+.sub-btn:hover {
+    background-color: #2e9845;
+}
+
+@media screen and (max-width: 480px) {
+    .query-form {
+        position: relative;
+        width: 100%;
+        height: 49px;
+        left: 0;
+        top: 0;
+    }
+    .query-head {
+        font-size: 21px;
+        left: 120px;
+        top: 10px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .heading {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .user-data {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        width: 80%;
+        height: 80%;
+        top: 70px;
+        left: 5px;
+
+    }
+    #u-name {
+        left: 27px;
+    }
+    #u-sub {
+        left: 27px;
+    }
+    #q-text {
+        font-size: 13px;
+        width: 83%;
+        height: 500%;
+        left: 27px;
+        border: 2px solid #FEA500;
+    }
+    .sub-btn {
+        font-size: 13px;
+        width: 50%;
+        height: 64%;
+        top: 408px;
+        left: 80px;
+    }
+    .can-btn {
+        font-size: 13px;
+        width: 50%;
+        height: 64%;
+        top: 448px;
+        left: 80px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 780px) {
+    .query-form {
+        position: relative;
+        width: 100%;
+        height: 49px;
+        left: 0;
+        top: 0;
+    }
+    .query-head {
+        font-size: 25px;
+        top: 7px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .heading {
+        width: 70%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        
+    }
+    .user-data {
+        position: relative;
+        font-size: 13px;
+        top: 70px; 
+    }
+    #u-name {
+        left: 60px;
+        width: 30%;
+    }
+    #u-sub {
+        left: 210px;
+        width: 30%;
+    }
+    #q-text {
+        font-size: 13px;
+        width: 83%;
+        height: 500%;
+        border: 2px solid #FEA500;
+        top: 456px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .sub-btn {
+        font-size: 13px;
+        width: 20%;
+        height: 64%;
+        top: 788px;
+        bottom: 0;
+        right: 0;
+        left: 450px;
+        margin: auto;
+    }
+    .can-btn {
+        font-size: 13px;
+        width: 20%;
+        height: 64%;
+        top: 788px;
+        bottom: 0;
+        right: 450px;
+        left: 0;
+        margin: auto;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1024px) {
+    .query-form {
+        position: relative;
+        width: 82%;
+        height: 49px;
+        left: 0;
+        top: 145px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .query-head {
+        font-size: 30px;
+        top: 9px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .heading {
+        height: 120%;
+        width: 65%;
+        top: -50px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        
+    }
+    .user-data {
+        top: 170px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 40%;
+    }
+    #u-name {
+        right: 520px;
+        width: 30%;
+    }
+    #u-sub {
+        left: 520px;
+        width: 30%;
+    }
+    #q-text {
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .query-form {
+        position: relative;
+        width: 82%;
+        height: 49px;
+        left: 0;
+        top: 145px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .query-head {
+        font-size: 40px;
+        top: 15px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .heading {
+        width: 65%;
+        top: -50px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        
+    }
+    .user-data {
+        top: 150px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 60%;
+        font-size: 20px;
+    }
+    #u-name {
+        right: 520px;
+        width: 30%;
+    }
+    #u-sub {
+        left: 520px;
+        width: 30%;
+    }
+    #q-text {
+        top: 557px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .sub-btn {
+        right: 114px;
+        margin: auto;
+        font-size: 20px;
+    }
+    .can-btn {
+        left: 114px;
+        margin: auto;
+        font-size: 20px;
+    }
+}
