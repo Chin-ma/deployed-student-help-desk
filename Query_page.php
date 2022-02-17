@@ -18,9 +18,7 @@ include 'Header.php';
             <input type="text" name="subject" class="user-data" id="u-sub" placeholder="Subject">  
             <textarea name="querytext" id="q-text" placeholder="Type here ..."></textarea>
             <div class="action-btns">
-                <a href="Home.php">
-                    <button class="sub-btn" type="submit">Post</button>
-                </a>
+                <button class="sub-btn" type="submit">Post</button>
             </div>
         </form>
         <a href="Home.php">
