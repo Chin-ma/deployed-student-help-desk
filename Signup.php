@@ -15,7 +15,7 @@
             <input type="text" name="username" id="user" class="field" placeholder="Username">
             <input type="email" name="email" id="studmail" class="field" placeholder="Email">
             <input type="password" name="password" id="pass" class="field" placeholder="Password"><i class="fa fa-eye" id="eye" onclick="show('pass')"></i>
-            <button class="log-btn">Sign In</button>
+            <button type="submit" class="log-btn">Sign In</button>
         </form>
         <span class="state">Already have an account? <a href="Login_page.php">Login</a></span>
     </div>
