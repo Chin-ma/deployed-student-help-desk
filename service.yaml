@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-help-desk-service
+spec:
+  selector:
+    app: student-help-desk
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
+
