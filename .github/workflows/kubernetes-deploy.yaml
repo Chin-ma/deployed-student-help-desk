@@ -45,6 +45,11 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
-        kubectl apply -f backend.yaml
-        kubectl apply -f frontend.yaml
-        kubectl apply -f mysql-data.yaml
+        echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
+        kubectl get nodes
+      
+    - name: Validate Kubernetes Manifests
+      run: |
+        kubectl apply --dry-run=client --validate=true -f backend.yaml
+        kubectl apply --dry-run=client --validate=true -f frontend.yaml
+        kubectl apply --dry-run=client --validate=true -f mysql-data.yaml
