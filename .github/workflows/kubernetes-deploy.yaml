@@ -61,6 +61,14 @@ jobs:
         echo "$MINIKUBE_CLIENT_KEY" > ~/.minikube/profiles/minikube/client.key
         echo "$MINIKUBE_CA_CERT" > ~/.minikube/ca.crt
 
+        # Optional: Print the first few lines of the certificate files for verification
+        echo "Client Certificate:"
+        head -n 5 ~/.minikube/profiles/minikube/client.crt
+        echo "Client Key:"
+        head -n 5 ~/.minikube/profiles/minikube/client.key
+        echo "CA Certificate:"
+        head -n 5 ~/.minikube/ca.crt
+
     # Step 9: Verify Kubernetes cluster connection by checking the nodes
     - name: Verify Kubernetes cluster
       run: |
