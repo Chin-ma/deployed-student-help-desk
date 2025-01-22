@@ -48,8 +48,9 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         echo "Applying Kubernetes manifests"
-        kubectl apply -f ./kubernetes/deployment.yaml
-        kubectl apply -f ./kubernetes/service.yaml
+        kubectl apply -f backend.yaml
+        kubectl apply -f frontend.yaml
+        kubectl apply -f mysql-data.yaml
 
     # Step 7: Verify the deployment
     - name: Verify Kubernetes deployment
