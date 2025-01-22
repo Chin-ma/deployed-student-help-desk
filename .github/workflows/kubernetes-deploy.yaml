@@ -42,7 +42,7 @@ jobs:
     - name: Set up Kubernetes context
       run: |
         echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
-        kubectl get nodes
+        sudo kubectl get nodes
 
     # Step 6: Apply Kubernetes manifests (deployment and service)
     - name: Deploy to Kubernetes
