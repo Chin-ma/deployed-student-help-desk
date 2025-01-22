@@ -41,8 +41,10 @@ jobs:
     # Step 5: Set up Kubernetes context to interact with Minikube
     - name: Set up Kubernetes context
       run: |
-        echo "Setting up Kubernetes context for Minikube"
+        echo "${{ secrets.KUBECONFIG }}" | base64 --decode > ~/.kube/config
         kubectl config use-context minikube
+      env:
+        KUBECONFIG: ${{ secrets.KUBECONFIG }}
 
     # Step 6: Apply Kubernetes manifests (deployment and service)
     - name: Deploy to Kubernetes
