@@ -36,22 +36,45 @@ jobs:
     - name: Push Image
       run: |
         docker push chinmaycp/student-help-desk:latest
+    
+    # Step 5: Install Minikube
+    - name: Install Minikube
+      run: |
+        curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        sudo mv minikube /usr/local/bin/
+        sudo chmod +x /usr/local/bin/minikube
+   
+    # Step 6: Start Minikube (this will set up a Kubernetes cluster on the runner)
+    - name: Start Minikube
+      run: |
+        minikube start --driver=docker
 
-    # Step 5: Apply Kubernetes manifests
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v3
-      with:
-        version: 'latest'
+    # Step 7: Set KUBECONFIG to the correct location
+    - name: Set KUBECONFIG environment variable
+      run: echo "KUBECONFIG=/home/runner/.kube/config" >> $GITHUB_ENV
 
+    # Step 8: Set up Kubernetes certificates (using GitHub secrets for security)
+    - name: Set up Kubernetes Certificates
+      run: |
+        mkdir -p ~/.minikube/profiles/minikube
+        echo "$MINIKUBE_CLIENT_CERT" > ~/.minikube/profiles/minikube/client.crt
+        echo "$MINIKUBE_CLIENT_KEY" > ~/.minikube/profiles/minikube/client.key
+        echo "$MINIKUBE_CA_CERT" > ~/.minikube/ca.crt
+
+    # Step 9: Verify Kubernetes cluster connection by checking the nodes
+    - name: Verify Kubernetes cluster
+      run: |
+        kubectl get nodes
+
+    # Step 10: Deploy the application to Kubernetes
     - name: Deploy to Kubernetes
       run: |
-        chown -R $USER $HOME/.kube $HOME/.minikube
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
-        kubectl get nodes
-      
-    - name: Validate Kubernetes Manifests
+        kubectl apply -f backend.yaml
+        kubectl apply -f frontend.yaml
+        kubectl apply -f mysql-data.yaml
+
+    # Step 11: Verify deployment status (Optional, to ensure everything is running)
+    - name: Verify Kubernetes Deployments
       run: |
-        kubectl apply --dry-run=client --validate=true -f backend.yaml
-        kubectl apply --dry-run=client --validate=true -f frontend.yaml
-        kubectl apply --dry-run=client --validate=true -f mysql-data.yaml
+        kubectl get pods
+        kubectl get svc
