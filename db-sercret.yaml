@@ -1,9 +1,0 @@
-apiVersion: v2
-kind: Secret
-metadata:
-  name: db-credentials
-type: Opaque
-data:
-  username: Y2hpbm1heQ==  # Replace with base64-encoded username
-  password: Y2hpbmkyMDAz  # Replace with base64-encoded password
-  root-password: Y2hpbmk=  # Replace with base64-encoded root password
